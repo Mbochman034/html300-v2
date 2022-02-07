@@ -1,0 +1,4 @@
+I combined a few of the techniques outlined on the following page to create the look I was trying to achieve:
+https://bootstrapbay.com/blog/css-transitions-buttons/
+
+
