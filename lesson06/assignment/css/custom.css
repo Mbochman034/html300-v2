@@ -1,0 +1,20 @@
+.nav li a {
+  color: #fff;
+}
+
+.nav li a:hover {
+  color: #d4d3d3;
+}
+
+.footer-copyright {
+  background-color: #0b160b;
+}
+
+.footer-copyright p {
+  color: #fff;
+}
+
+.banner {
+  background-color: rgb(221, 221, 221);
+}
+/*# sourceMappingURL=custom.css.map */

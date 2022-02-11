@@ -1,0 +1,24 @@
+// // Import partials here
+// @import 'base.normalize';
+// @import 'settings.variables';
+// // @import 'settings.responsive';
+// @import 'components.content';
+
+.nav li a {
+    color: #fff;
+    &:hover {
+        color: #d4d3d3;
+    }
+}
+
+.footer-copyright {
+    background-color: #0b160b;
+    & p {
+        color: #fff;
+    }
+    
+}
+
+.banner {
+    background-color: grey;
+}
