@@ -1,0 +1,171 @@
+// Partial Import
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+
+html {
+  box-sizing: border-box,
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: $font-family;
+  text-align: center;
+}
+
+header {
+  background-color: $white;
+  padding: .5rem;
+  color: $white;
+  text-align: center;
+  & img {
+    width: 20%
+  }
+}
+
+
+h2 {
+font-size: 3rem;
+color: $royal;
+line-height: 1;
+margin: 0;
+}
+
+h3 {
+font-size: 2rem;
+color: $black;
+line-height: 1;
+}
+
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #6E757A;
+    margin-bottom: 15px;
+    letter-spacing: 0.025rem;
+}
+//to make sure no empty space between each section
+
+.main {
+  margin: 0;
+  padding: 0;
+}
+//each item is in center and have space around it (do not go to the far left and right)
+
+.nav {
+  background-color: $green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  //total space the nav can take up to, when screen larger than 1900, it shows white space
+  &-wrap {
+    max-width: 1900px;
+  }
+  &__item {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-family: $font-family;
+    margin-right: 2rem;
+    @include media-query(mobile) {
+      margin: 0 1rem;
+      width: auto;
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+    &:last-of-type {
+      margin-right: 1rem;
+    }
+  }
+  .nav__item:hover {
+    text-decoration: underline;
+  }
+
+  // &-bar {
+  //   color: $white;
+  //   text-decoration: none;
+  }
+}
+//use grid for page layout, both side section and main section is taking up the same amount of space
+//on smaller screen, ony 1 section is showing at a time
+
+.grid-main {
+  display: grid; //maybe will take up same amount of space for the side-bar and main-section for later
+  //grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 30% 70%;
+  grid-column-gap: 0;
+  @include media-query(mobile) {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+}
+//use flex for section, organize content in columns, set height so it takes up space
+
+.left-side-bar {
+  background-color: $lavendar;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+
+//Section uses flex, Content uses columns
+
+.right-main {
+  background-color: $white;
+  padding: 1rem;
+}
+
+.hero-btns a {
+    background-color: $teal;
+    border:2px solid $teal;
+    color: $white;
+    padding: 17px 35px;
+    font-size: 1.0rem;
+    border-radius: 30px;
+}
+   /* Button: hover which includes the transition */
+    &:hover {
+      background-color: $white;
+      border:2px solid $teal;
+      color: $royal;
+      padding: 17px 35px;
+      font-size: 1.0rem;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+  }
+  &a:last-child {
+    color: $royal;
+    padding: 17px 35px;
+    font-size: 1.0rem;
+  }
+  &a:last-child:hover {
+    color: $teal;
+    transition: all 0.3s ease;
+  }
+}
+
+footer {
+  background-color: $dark-grey;
+  padding: 1rem;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+footer h3 {
+  color: #ff;
+
+}
