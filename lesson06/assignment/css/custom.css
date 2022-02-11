@@ -15,6 +15,10 @@
 }
 
 .banner {
-  background-color: rgb(221, 221, 221);
+  background-color: #c7c6c6;
+}
+
+.accordian-container {
+  padding-bottom: 6rem;
 }
 /*# sourceMappingURL=custom.css.map */
