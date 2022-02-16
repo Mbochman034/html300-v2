@@ -1,3 +1,4 @@
+
 // Partial Import
 @import 'base.normalize';
 @import 'settings.variables';
@@ -56,11 +57,7 @@ h3 {
 color: $black;
 font-size: 2rem;
 line-height: 1;
-<<<<<<< HEAD
 } 
-=======
-}
->>>>>>> 6cf8a568dc1449ca475521496f8df31c4077f94b
 
 .main {
   margin: 0;
@@ -187,4 +184,195 @@ footer {
   & h3 {
     color: #fff;
   }
+=======
+// Partial Import
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+html {
+  box-sizing: border-box,
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: $font-family;
+  text-align: center;
+}
+
+header {
+  color: $white;
+  background-color: $white;
+  padding: .5rem;
+  text-align: center;
+  // Header image nested //
+  & img {
+    width: 40%
+  }
+}
+
+p {
+  font-size: 1.0rem;
+  line-height: 1.8;
+  color: $dark-grey;
+  margin-bottom: .5rem;
+  letter-spacing: 0.025rem;
+  }
+
+h1 {
+  font-size: 4.4rem;
+  color: $royal;
+  line-height: 1;
+  margin: 0;
+  }
+  
+h2 {
+color: $royal;
+font-size: 3rem;
+line-height: 1;
+margin: 0;
+}
+
+h3 {
+color: $black;
+font-size: 2rem;
+line-height: 1;
+
+} 
+
+}
+ 6cf8a568dc1449ca475521496f8df31c4077f94b
+
+.main {
+  margin: 0;
+  padding: 0;
+}
+
+//Setup flex for nav //
+.nav {
+  background-color: $green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  //Largest screen resolution of nav area//
+  &-wrap {
+    max-width: 1900px;
+  }
+  &__item {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-family: $font-family;
+    margin-right: 2rem;
+    //Mixin for mobile (max-width: 767px)//
+    @include media-query(mobile) {
+      margin: 0 1rem;
+      width: auto;
+      font-size: 1.25rem;
+      padding: 0.5rem;
+    }
+    &:last-of-type {
+      margin-right: 1rem;
+    }
+  }
+
+  .nav-bar {
+  color: $white;
+  text-decoration: none;
+  // Hover styling for nav items//
+  &:hover {
+    text-decoration: underline;
+  }
+ }
+}
+
+//Grid used//
+.grid-main {
+  display: grid; 
+  grid-template-columns: 30% 70%;
+  grid-column-gap: 0;
+  // Mobile mixin //
+  @include media-query(mobile) {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+}
+
+//Setup left-side-bar section with flex //
+.left-side-bar {
+  align-items: center;
+  background-color: $lavendar;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  height: 100%;
+  // justify-content: center;
+  padding: 1rem;
+  & img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+
+.plant-name {
+  color: $dark-grey;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.025rem;
+  margin: 0;
+}
+
+//Setup right-main section with flex //
+.right-main {
+  background-color: $white;
+  padding: 3rem;
+  & img {
+    width: 40%;
+    padding-bottom: 1rem;
+  }
+}
+
+// Hero section button styling //
+.hero-btns {
+  padding: 2rem 0 2rem 0;
+  & a {
+    background-color: $teal;
+    border:2px solid $teal;
+    border-radius: 30px;
+    color: $white;
+    font-size: 1.0rem;
+    font-weight: 600;
+    padding: 17px 35px;
+    text-decoration: none;
+  }
+}
+// Button:hover which includes the transition of fill change //
+.hero-btns a:hover {
+  background-color: $white;
+  border:2px solid $teal;
+  border-radius: 30px;
+  color: $royal;
+  padding: 17px 35px;
+  font-size: 1.0rem;
+  transition: all 0.4s ease;
+}
+
+footer {
+  background-color: $dark-grey;
+  padding: 1rem;
+  font-size: 1rem;
+  // Nested h3 styling within the footer //
+  & h3 {
+    color: #fff;
+  }
+
 }
