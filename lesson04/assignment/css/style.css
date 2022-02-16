@@ -1,3 +1,4 @@
+
 /*--------- Baseline ------------*/* {margin: 0;padding: 0;}html {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}*, *:before, *:after {-webkit-box-sizing: inherit;-moz-box-sizing: inherit;box-sizing: inherit;}a {font-weight: 600;color: #314584;text-decoration: none;letter-spacing: 1px;position: relative;}a:focus,a:hover {color: rgba(44, 44, 44, 0.8);text-decoration: none;}img {max-width: 100%;height: auto;}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {color: #314584;font-weight: 600;letter-spacing: 1px;}:active,:focus {outline: none !important;}
 
 /*--------- Fonts ---------------*/
@@ -10,8 +11,7 @@ body {
   transition: opacity 1s;
   min-width: 330px;
 }
-h1,
-.h1 {
+
   font-size: 4.4rem;
   margin-bottom: 20px;
 }
